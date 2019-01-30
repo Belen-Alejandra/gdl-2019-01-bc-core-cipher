@@ -1,24 +1,35 @@
 window.cipher = {
-  function alpha(string,desp){
-let salida= '';
-for (let i = 0; i < string.length; i++){
-   oldAscII = string[i].charCodeAt();
-    newAscII = (oldAscII - 65 + desp) % 26 + 65;
+  function encode(offset, string){
+let salida = '';
+let stringM = string.toUpperCase();
+for (let i = 0; i < stringM.length; i++){
+   oldAscII = stringM[i].charCodeAt();
+   if(oldAscII === 32){
+     newAscII = 32;
+   }
+    else {
+     newAscII = (oldAscII - 65 + offset) % 26 + 65;
+   }
     salida = salida.concat(String.fromCharCode(newAscII))
     //console.log(String.fromCharCode(newAscII))
 }
-  document.write(salida)
+  return salida;
 }
 
-function alphaDecod(string,desp){
+function decode(offset, string){
   let salida = '';
-  for (let i = 0; i<string.length;i++){
-     oldAscII = string[i].charCodeAt();
-
-      newAscII = (oldAscII + 65 - desp) % 26 + 65;
+  let stringM = string.toUpperCase();
+  for (let i = 0; i<stringM.length; i++){
+     oldAscII = stringM[i].charCodeAt();
+     if(oldAscII === 32){
+       newAscII = 32;
+     }
+      else {
+        newAscII = (oldAscII + 65 - offset) % 26 + 65;
+      }
       salida = salida.concat(String.fromCharCode(newAscII))
       //salida=salida.concat(oldAscII[i]);
   }
-  document.write(salida)
+   return salida;
 }
 };
