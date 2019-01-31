@@ -1,23 +1,27 @@
 window.cipher = {
-  function encode(offset, string){
+encode: (offset, string) => {
 let salida = '';
+let oldAscii;
+let newAscii;
 let stringM = string.toUpperCase();
-for (let i = 0; i < stringM.length; i++){
-   oldAscII = stringM[i].charCodeAt();
-   if(oldAscII === 32){
-     newAscII = 32;
+for (let i = 0; i < stringM.length; i++) {
+   oldAscii=stringM[i].charCodeAt();
+   if(oldAscii === 32){
+     newAscii = 32;
    }
     else {
-     newAscII = (oldAscII - 65 + offset) % 26 + 65;
+     newAscii = (oldAscii - 65 + offset) % 26 + 65;
    }
-    salida = salida.concat(String.fromCharCode(newAscII))
+    salida = salida.concat(String.fromCharCode(newAscii));
     //console.log(String.fromCharCode(newAscII))
 }
   return salida;
-}
+},
 
-function decode(offset, string){
+  decode: (offset, string) => {
   let salida = '';
+  let oldAscII;
+  let newAscII;
   let stringM = string.toUpperCase();
   for (let i = 0; i<stringM.length; i++){
      oldAscII = stringM[i].charCodeAt();
@@ -27,7 +31,7 @@ function decode(offset, string){
       else {
         newAscII = (oldAscII + 65 - offset) % 26 + 65;
       }
-      salida = salida.concat(String.fromCharCode(newAscII))
+      salida = salida.concat(String.fromCharCode(newAscII));
       //salida=salida.concat(oldAscII[i]);
   }
    return salida;
