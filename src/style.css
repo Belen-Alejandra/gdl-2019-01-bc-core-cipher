@@ -8,11 +8,11 @@ background-image: url("images/circulo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 25px;
+  padding: 3px;
 }
 
 h1 {
-  font-family: sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   font-size: 70pt;
   text-align: center;
   color: white;
@@ -28,12 +28,12 @@ h3 {
 }
 
  .msj {
-   padding-top: 100px;
+   padding-top: 130px;
  }
 
 .root {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
 }
 
@@ -44,6 +44,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+
 }
 
 
