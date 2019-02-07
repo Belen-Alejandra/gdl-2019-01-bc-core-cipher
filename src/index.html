@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,  initial-scale=1">
+
 
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Cifrado cesar</h1>
+
+
+    <div class="hero-image">
+
+
+<h1 style="font-size:5vw;">NCIS</h1>
+      <div class="hero-text">
+
+
+
+        <form id="myForm" class="myForm">
+          <h2> Introduce tu mensaje </h2>
+
+          <input type="text" name="text1" class="text1" id="text1">
+        </form>
+
+
+
+
+        <form id="myForm1">
+          <h3> No. clave </h3>
+
+          <input type="number" id="offset" class="offset">
+        </form>
+
+
+
+
+
+        <div id="myForm2">
+         <input type="button" id="encode" class="button" value="Codificar">
+         <input type="button" id="decode" class="button" value="Decodificar">
+       </div>
+
+
+
+
+        <form class="ex1">
+        <p>Tu mensaje cifrado es:</p>
+        <div id="enco"> </div>
+
+      </form>
+
+      <div class="bclear">
+        <input type="button" id="clear" value="Borrar" class="boton">
+      </div>
+
+
+      </div>
     </div>
-    <div>
-      <h2> Introduce tu desplazamiento </h2>
-      <input type="number" id="offset" autofocus>
+
+    <div class="footer">
+      <span >Belen Ponce</span>
+      <span>-----</span>
+      <span>Cifrado Cesar</span>
+      <span>-----</span>
+      <span>Laboratoria</span>
     </div>
 
 
-    <div>
-      <h2> Introduce tu mensaje </h2>
-      <input type="text" name="text1" id="text1">
-
-     <input type="button" id="encode" value="Codificar">
-     <input type="button" id="decode" value="Decodificar">
-    </div>
-<div class="">
-  <h2>¡Tu mensaje cifrado es: <span id="enco"> </span>!</h2>
-</div>
-<input type="button" id="clear" value="Limpiar">
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
